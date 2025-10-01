@@ -1,3 +1,4 @@
+import 'package:ecommerce_provider/utils/theme/themeData.dart';
 import 'package:ecommerce_provider/views/screen/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 
@@ -14,11 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      themeMode: ThemeMode.system,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       home: Navigation(),
     );
   }
